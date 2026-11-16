@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0ea5a5">
+
+  <!-- Primary SEO — title, description, canonical are overridden per doctor by the inline script at the bottom -->
+  <title>Doctor Profile | DUUGO</title>
+  <meta name="description" content="View a doctor's profile on DUUGO — specialization, experience, languages, consultation fee and available appointment slots. Book online in under a minute.">
+  <meta name="keywords" content="doctor profile, find a doctor, book doctor appointment, doctor specialization, consultation fee, Kolkata doctors, DUUGO doctors">
+  <meta name="author" content="Anal Pattanayak">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://duugo.in/doctor.html">
+
+  <!-- Language / Geo -->
+  <meta http-equiv="content-language" content="en-IN">
+  <meta name="geo.region" content="IN-WB">
+  <meta name="geo.placename" content="Kolkata">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="DUUGO">
+  <meta property="og:url" content="https://duugo.in/doctor.html">
+  <meta property="og:title" content="Doctor Profile | DUUGO">
+  <meta property="og:description" content="View a doctor's profile on DUUGO — specialization, experience, languages, fee and available slots.">
+  <meta property="og:image" content="https://duugo.in/assets/img/duugo-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DUUGO Doctor Profile">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@duugo">
+  <meta name="twitter:creator" content="@duugo">
+  <meta name="twitter:url" content="https://duugo.in/doctor.html">
+  <meta name="twitter:title" content="Doctor Profile | DUUGO">
+  <meta name="twitter:description" content="View a doctor's profile on DUUGO — specialization, experience, languages, fee and available slots.">
+  <meta name="twitter:image" content="https://duugo.in/assets/img/duugo-og.jpg">
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#0ea5a5">
+  <link rel="manifest" href="assets/images/site.webmanifest">
+  <!-- Fallback while the PNG set isn't generated yet -->
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Structured Data (JSON-LD) — base graph, + per-doctor Physician injected by script.js -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://duugo.in/#organization",
+        "name": "DUUGO",
+        "alternateName": "Duugo",
+        "url": "https://duugo.in/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://duugo.in/assets/img/duugo-logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "image": "https://duugo.in/assets/img/duugo-og.jpg",
+        "description": "DUUGO is an all-in-one medical services app for booking doctors, ambulances and nursing home beds.",
+        "email": "analpattanayak@gmail.com",
+        "telephone": "+91-7810904560",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kolkata",
+          "addressRegion": "West Bengal",
+          "addressCountry": "IN"
+        },
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+91-7810904560",
+          "email": "analpattanayak@gmail.com",
+          "contactType": "customer support",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Bengali", "Hindi"]
+        }],
+        "sameAs": [
+          "https://twitter.com/duugo",
+          "https://facebook.com/duugo",
+          "https://linkedin.com/company/duugo",
+          "https://instagram.com/duugo"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://duugo.in/#website",
+        "url": "https://duugo.in/",
+        "name": "DUUGO",
+        "publisher": { "@id": "https://duugo.in/#organization" },
+        "inLanguage": "en-IN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://duugo.in/doctors.html?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://duugo.in/doctor.html#webpage",
+        "url": "https://duugo.in/doctor.html",
+        "name": "Doctor Profile | DUUGO",
+        "isPartOf": { "@id": "https://duugo.in/#website" },
+        "about": { "@id": "https://duugo.in/#organization" },
+        "description": "View a doctor's profile on DUUGO — specialization, experience, languages, fee and available slots.",
+        "inLanguage": "en-IN",
+        "breadcrumb": { "@id": "https://duugo.in/doctor.html#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://duugo.in/doctor.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://duugo.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Doctors", "item": "https://duugo.in/doctors.html" },
+          { "@type": "ListItem", "position": 3, "name": "Doctor Profile", "item": "https://duugo.in/doctor.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Per-doctor Physician schema — empty placeholder, populated by script.js -->
+  <script type="application/ld+json" id="physician-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Doctor Name",
+    "medicalSpecialty": "Specialization",
+    "url": "https://duugo.in/doctor.html",
+    "worksFor": { "@id": "https://duugo.in/#organization" }
+  }
+  </script>
+</head>
+<body data-page="details">
+
+  <div id="site-nav"></div>
+
+  <main>
+
+    <!-- Page header -->
+    <header class="page-head">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="small mb-2">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="doctors.html">Doctors</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Doctor Profile</li>
+          </ol>
+        </nav>
+        <h1>Doctor Profile</h1>
+        <a href="doctors.html" class="small">&larr; Back to all doctors</a>
+      </div>
+    </header>
+
+    <!-- Doctor profile (rendered by script.js) -->
+    <section class="section" aria-labelledby="profile-heading">
+      <div class="container">
+        <h2 id="profile-heading" class="visually-hidden">Doctor details</h2>
+
+        <div id="profile" role="region" aria-live="polite" aria-busy="true">
+          <!-- Noscript fallback: shown only when JS is disabled or blocked -->
+          <noscript>
+            <div class="alert alert-warning">
+              <strong>JavaScript is disabled.</strong>
+              DUUGO's doctor profiles are loaded dynamically. To browse all available doctors,
+              <a href="doctors.html">visit the doctors list</a> or
+              <a href="contact.html">contact us</a> at
+              <a href="mailto:analpattanayak@gmail.com">analpattanayak@gmail.com</a> /
+              <a href="tel:+917810904560">+91 78109 04560</a>.
+            </div>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- Static SEO content — always indexable, even if JS fails or ?id= is invalid -->
+    <section class="section section-alt" aria-labelledby="about-profiles-heading">
+      <div class="container" style="max-width:900px">
+        <h2 id="about-profiles-heading" class="text-center mb-4">About doctor profiles on DUUGO</h2>
+        <p>
+          Every doctor profile on DUUGO shows the information you need to choose the right specialist
+          with confidence. Each profile lists the doctor's specialization, years of experience,
+          languages spoken, clinic or hospital affiliation, city and consultation fee — so you can
+          compare doctors side by side before you book.
+        </p>
+        <p>
+          DUUGO covers a wide range of specializations, including general medicine, pediatrics,
+          cardiology, dermatology, orthopedics, gynecology, neurology, psychiatry, ENT and
+          ophthalmology. Profiles are available for doctors across states, districts and
+          neighbourhoods in India, with a focus on Kolkata and West Bengal.
+        </p>
+        <p class="mb-0">
+          This page is a demonstration of the DUUGO interface. Doctor names, fees and testimonials
+          are fictional sample content and no real appointment is booked through this site.
+        </p>
+      </div>
+    </section>
+
+    <!-- How to book -->
+    <section class="section" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading" class="text-center mb-5">How to book an appointment with a doctor</h2>
+        <div class="row g-4 text-center">
+          <div class="col-md-3">
+            <div class="icon-box mx-auto"><i class="bi bi-person-vcard" aria-hidden="true"></i></div>
+            <h3 class="h5">Compare profiles</h3>
+            <p class="small mb-0">Check specialization, experience, languages and consultation fee.</p>
+          </div>
+          <div class="col-md-3">
+            <div class="icon-box mx-auto"><i class="bi bi-calendar2-week" aria-hidden="true"></i></div>
+            <h3 class="h5">Pick a slot</h3>
+            <p class="small mb-0">Choose a date and an available time slot from the doctor's schedule.</p>
+          </div>
+          <div class="col-md-3">
+            <div class="icon-box mx-auto"><i class="bi bi-person-heart" aria-hidden="true"></i></div>
+            <h3 class="h5">Add patient details</h3>
+            <p class="small mb-0">Book for yourself or a family member — name, mobile and email.</p>
+          </div>
+          <div class="col-md-3">
+            <div class="icon-box mx-auto"><i class="bi bi-check2-circle" aria-hidden="true"></i></div>
+            <h3 class="h5">Confirm</h3>
+            <p class="small mb-0">Get a demo confirmation and view it in your dashboard.</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="doctors.html" class="btn btn-duugo">Browse all doctors</a>
+          <a href="appointment.html" class="btn btn-outline-duugo">Book an appointment</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  <!-- SEO enhancement: per-doctor title, description, canonical, OG/Twitter, Physician JSON-LD -->
+  <script>
+  (function () {
+    var id = new URLSearchParams(location.search).get('id');
+    if (!id) return;
+
+    function setMeta(sel, attr, val) {
+      var el = document.querySelector(sel);
+      if (el) el.setAttribute(attr, val);
+    }
+
+    // Give script.js a moment to render the profile, then sync head meta.
+    var tries = 0;
+    var t = setInterval(function () {
+      tries++;
+      // Look for an h2/h3 or .doctor-name inside #profile
+      var prof = document.getElementById('profile');
+      var nameEl = prof && prof.querySelector('h2, h3, .doctor-name, [data-doctor-name]');
+      var specEl = prof && prof.querySelector('.doctor-spec, [data-doctor-spec]');
+
+      if (nameEl && nameEl.textContent.trim().length > 2) {
+        clearInterval(t);
+
+        var name = nameEl.textContent.trim();
+        var spec = specEl ? specEl.textContent.trim() : 'Doctor';
+        var canonical = location.origin + location.pathname + '?id=' + encodeURIComponent(id);
+        var title = name + (spec && spec !== 'Doctor' ? ' – ' + spec : '') + ' | DUUGO';
+        var desc = 'Book an appointment with ' + name +
+                   (spec && spec !== 'Doctor' ? ' (' + spec + ')' : '') +
+                   ' on DUUGO. See experience, languages, consultation fee and available time slots.';
+
+        document.title = title;
+        setMeta('meta[name="description"]', 'content', desc);
+        setMeta('link[rel="canonical"]', 'href', canonical);
+
+        setMeta('meta[property="og:title"]', 'content', title);
+        setMeta('meta[property="og:description"]', 'content', desc);
+        setMeta('meta[property="og:url"]', 'content', canonical);
+
+        setMeta('meta[name="twitter:title"]', 'content', title);
+        setMeta('meta[name="twitter:description"]', 'content', desc);
+        setMeta('meta[name="twitter:url"]', 'content', canonical);
+
+        // Update Physician JSON-LD
+        var schemaEl = document.getElementById('physician-schema');
+        if (schemaEl) {
+          try {
+            var data = JSON.parse(schemaEl.textContent);
+            data.name = name;
+            data.url = canonical;
+            if (spec && spec !== 'Doctor') data.medicalSpecialty = spec;
+            schemaEl.textContent = JSON.stringify(data);
+          } catch (e) { /* ignore */ }
+        }
+
+        // Update H1 on the page
+        var h1 = document.querySelector('.page-head h1');
+        if (h1) h1.textContent = name;
+
+        // Reset aria-busy on profile
+        if (prof) prof.setAttribute('aria-busy', 'false');
+      } else if (tries > 20) {
+        clearInterval(t);
+      }
+    }, 100);
+  })();
+  </script>
+</body>
+</html>

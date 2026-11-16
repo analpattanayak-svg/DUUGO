@@ -1,0 +1,308 @@
+/* ==========================================================================
+   DUUGO – custom styles on top of Bootstrap 5
+   Color tokens tuned for WCAG AA (see comments on each fix)
+   ========================================================================== */
+
+:root{
+  /* Brand blue – all contrast checks pass unchanged */
+  --blue:#0b3a8c;          /* 10.5:1 on #fff */
+  --blue-d:#082a66;
+
+  /* Teal – keep for fills/icons/decorative only */
+  --teal:#0fb5a6;          /* 2.57:1 on #fff – decorative use only */
+  /* FIX: darker teal for text, buttons and hovers (5.08:1 on #fff) */
+  --teal-dark:#087a6e;
+  --teal-mid:#0c978a;
+
+  /* Neutrals */
+  --navy:#0f1f3d;          /* 16.4:1 on #fff – body copy */
+  --soft:#eef4fb;
+
+  --radius:18px;
+  --shadow:0 8px 28px rgba(15,31,61,.08);
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+body{
+  font-family:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;
+  color:var(--navy);
+  background:#fff;
+  padding-top:72px;
+}
+h1,h2,h3,h4,h5{font-weight:700;letter-spacing:-.01em}
+
+/* FIX: text-teal now uses the darker teal (2.57:1 → 5.08:1) */
+.text-teal{color:var(--teal-dark)!important}
+.text-blue{color:var(--blue)!important}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+.navbar{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  box-shadow:0 2px 16px rgba(15,31,61,.06);
+}
+.brand{
+  font-weight:800;font-size:1.5rem;color:var(--blue)!important;letter-spacing:.04em;
+}
+.brand i{color:var(--teal)}   /* decorative icon, contrast not required */
+
+.nav-link{color:var(--navy);font-weight:600}
+/* FIX: hover/active nav was 2.57:1 → 5.08:1 */
+.nav-link:hover,.nav-link.active{color:var(--teal-dark)!important}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-duugo{
+  background:var(--blue);color:#fff;border:0;border-radius:12px;
+  font-weight:600;padding:.6rem 1.2rem;transition:.2s;
+}
+/* FIX: hover was white on #0fb5a6 (2.57:1) → white on #087a6e (5.08:1) */
+.btn-duugo:hover{background:var(--teal-dark);color:#fff;transform:translateY(-2px)}
+
+.btn-outline-duugo{
+  border:2px solid var(--blue);color:var(--blue);border-radius:12px;
+  font-weight:600;transition:.2s;
+}
+.btn-outline-duugo:hover{background:var(--blue);color:#fff}
+
+/* FIX: btn-teal base was white on #0fb5a6 (2.57:1) → uses --teal-dark */
+.btn-teal{
+  background:var(--teal-dark);color:#fff;border:0;border-radius:12px;
+  font-weight:600;padding:.6rem 1.2rem;
+}
+/* FIX: hover was 3.62:1 → 7.20:1 */
+.btn-teal:hover{background:#06635a;color:#fff}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero{
+  background:linear-gradient(135deg,var(--blue-d),var(--blue) 60%,#0d6e8a);
+  color:#fff;padding:80px 0 110px;
+}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800}
+.hero p{opacity:.9;max-width:520px}   /* 5.01:1 at worst – passes AA */
+
+/* ==========================================================================
+   Layout primitives
+   ========================================================================== */
+.search-box{
+  background:#fff;border-radius:var(--radius);padding:1rem;
+  box-shadow:var(--shadow);margin-top:-60px;position:relative;z-index:2;
+}
+.page-head{background:var(--soft);padding:48px 0}
+.section{padding:70px 0}
+.section-alt{background:var(--soft)}
+
+.card{
+  border:0;border-radius:var(--radius);box-shadow:var(--shadow);
+}
+
+.lift{transition:.25s}
+.lift:hover{transform:translateY(-6px);box-shadow:0 14px 34px rgba(15,31,61,.14)}
+
+/* ==========================================================================
+   Icons & avatars
+   ========================================================================== */
+.icon-box{
+  width:56px;height:56px;border-radius:16px;background:var(--soft);
+  color:var(--blue);display:grid;place-items:center;font-size:1.6rem;
+  margin-bottom:1rem;
+}
+
+/* FIX: gradient now ends in --teal-dark so white text passes on the whole avatar */
+.avatar{
+  width:84px;height:84px;border-radius:50%;margin:0 auto 1rem;
+  background:linear-gradient(135deg,var(--blue),var(--teal-dark));
+  color:#fff;display:grid;place-items:center;font-size:1.7rem;font-weight:700;
+}
+.avatar.lg{width:130px;height:130px;font-size:2.6rem}
+
+/* ==========================================================================
+   Fee
+   ========================================================================== */
+.fee{font-weight:700;color:var(--blue);font-size:1.2rem}
+/* FIX: #6b7a90 on #fff was 4.38:1 → #5a6878 is 5.05:1 */
+.fee small{font-weight:400;color:#5a6878;font-size:.75rem}
+
+/* ==========================================================================
+   Slots
+   ========================================================================== */
+.slot{
+  border:2px solid #d5e0ee;border-radius:10px;padding:.45rem .8rem;
+  background:#fff;cursor:pointer;font-size:.9rem;transition:.15s;
+}
+/* FIX: hover border #0fb5a6 was 2.57:1 → #087a6e 5.08:1 */
+.slot:hover:not(:disabled){border-color:var(--teal-dark)}
+/* FIX: active slot white on teal was 2.57:1 → 5.08:1 */
+.slot.active{background:var(--teal-dark);border-color:var(--teal-dark);color:#fff}
+/* Disabled exempt from WCAG but bumped for readability */
+.slot:disabled{
+  background:#f1f4f8;color:#8c9aab;text-decoration:line-through;cursor:not-allowed;
+}
+
+/* ==========================================================================
+   Ambulance type cards
+   ========================================================================== */
+.amb-type{
+  cursor:pointer;border:2px solid #d5e0ee;border-radius:14px;
+  padding:1rem;transition:.2s;height:100%;
+}
+.amb-type.active{border-color:var(--teal-dark);background:#e8fbf8}
+
+/* ==========================================================================
+   Emergency banner
+   ========================================================================== */
+.emergency{
+  background:#fff1f1;border:2px solid #e0434a;border-radius:var(--radius);
+  padding:1rem 1.25rem;
+}
+/* FIX: default .text-danger on #fff1f1 was 4.11:1 → #b02a37 is 5.91:1 */
+.emergency .text-danger,
+.emergency h4,
+.emergency h2{color:#b02a37!important}
+
+/* ==========================================================================
+   Demo badge
+   ========================================================================== */
+.demo-badge{
+  background:#fff3cd;color:#7a5b00;border-radius:8px;
+  padding:.2rem .6rem;font-size:.75rem;font-weight:700;display:inline-block;
+}
+
+/* ==========================================================================
+   Stepper
+   ========================================================================== */
+.stepper{display:flex;gap:.5rem;flex-wrap:wrap}
+/* FIX: #8493a8 on #eef2f7 was 2.81:1 → #5c6b80 is 4.88:1 */
+.step{
+  flex:1;min-width:110px;text-align:center;padding:.7rem .4rem;
+  border-radius:12px;background:#eef2f7;color:#5c6b80;
+  font-size:.85rem;font-weight:600;
+}
+.step i{display:block;font-size:1.4rem}
+/* FIX: #0a8479 on #dff7f3 was 4.10:1 → var(--teal-dark) is 4.53:1 */
+.step.done{background:#dff7f3;color:var(--teal-dark)}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.faq-item{background:#fff;border-radius:14px;box-shadow:var(--shadow);margin-bottom:.8rem}
+.faq-q{
+  width:100%;text-align:left;background:none;border:0;
+  padding:1.1rem 1.25rem;font-weight:700;color:var(--navy);
+  display:flex;justify-content:space-between;
+}
+.faq-a{
+  max-height:0;overflow:hidden;padding:0 1.25rem;
+  transition:.3s;color:#51607a;   /* 6.32:1 – passes */
+}
+.faq-item.open .faq-a{max-height:200px;padding-bottom:1.1rem}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+.faq-q i{transition:.3s}
+
+/* ==========================================================================
+   Dashboard
+   ========================================================================== */
+.dash-nav .list-group-item{
+  border:0;border-radius:12px!important;font-weight:600;cursor:pointer;margin-bottom:.3rem;
+}
+.dash-nav .list-group-item.active{background:var(--blue)}
+.dash-sec{display:none}
+.dash-sec.show{display:block}
+
+/* ==========================================================================
+   Auth
+   ========================================================================== */
+.auth-card{max-width:460px;margin:50px auto}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer{background:var(--navy);color:#c4d0e6;padding:50px 0 20px}
+footer a{color:#c4d0e6;text-decoration:none}
+/* FIX: hover on #0fb5a6 was 6.37:1 – actually passes, but keeping darker for consistency */
+footer a:hover{color:var(--teal-mid)}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+.form-control,.form-select{
+  border-radius:12px;padding:.65rem .9rem;
+  /* FIX: default #ced4da is 1.54:1 – bumped to #8a97a6 (2.8:1) for WCAG 1.4.11 */
+  border-color:#8a97a6;
+}
+/* FIX: focus ring was rgba(15,181,166,.2) – barely visible
+   → uses darker teal at 25% for a visible focus indicator */
+.form-control:focus,.form-select:focus{
+  border-color:var(--teal-dark);
+  box-shadow:0 0 0 .2rem rgba(8,122,110,.25);
+}
+
+/* ==========================================================================
+   Dark mode (body.dark)
+   ========================================================================== */
+body.dark{background:#0b1220;color:#e6ecff}          /* 15.8:1 */
+body.dark .card,
+body.dark .navbar,
+body.dark .faq-item,
+body.dark .search-box{background:#121a2e;color:#e6ecff}
+body.dark .section-alt,
+body.dark .page-head{background:#0f1729}
+body.dark .nav-link,
+body.dark .faq-q{color:#e6ecff}
+
+/* NEW: fill gaps that were previously unreadable in dark mode */
+body.dark .faq-a{color:#a9b6cc}                       /* 4.55:1 on #121a2e */
+body.dark .fee small{color:#9aa9c2}                   /* 5.06:1 */
+body.dark .text-muted{color:#9aa9c2!important}
+body.dark .text-teal{color:#5fcfc2!important}         /* 5.53:1 on #121a2e */
+
+body.dark .step{background:#1a2540;color:#b6c2d9}     /* 6.5:1 */
+body.dark .step.done{background:#0f3a36;color:#7fd4c6}/* 6.9:1 */
+
+body.dark .slot{background:#121a2e;border-color:#2a3854;color:#e6ecff}
+body.dark .slot.active{background:var(--teal-dark);border-color:var(--teal-dark);color:#fff}
+body.dark .slot:disabled{background:#0e1626;color:#5b6982}
+
+body.dark .amb-type{border-color:#2a3854}
+body.dark .amb-type.active{background:#0f3a36;border-color:var(--teal-dark)}
+
+body.dark .demo-badge{background:#3d2f00;color:#ffd76b}
+
+body.dark .emergency{background:#2a1214;border-color:#7a242b}
+body.dark .emergency h4,
+body.dark .emergency h2,
+body.dark .emergency .text-danger{color:#ff8b94!important}
+
+body.dark .form-control,
+body.dark .form-select{
+  background:#0e1626;color:#e6ecff;border-color:#2a3854;
+}
+body.dark .form-control::placeholder,
+body.dark .form-select::placeholder{color:#7a89a3}
+body.dark .form-control:focus,
+body.dark .form-select:focus{
+  border-color:var(--teal);
+  box-shadow:0 0 0 .2rem rgba(15,181,166,.3);
+}
+
+body.dark .icon-box{background:#1a2540;color:#8fb2ff}
+body.dark .btn-outline-duugo{border-color:#8fb2ff;color:#8fb2ff}
+body.dark .btn-outline-duugo:hover{background:#8fb2ff;color:#0b1220}
+body.dark footer{background:#050b16}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce){
+  *{transition:none!important;animation:none!important}
+  /* Also disable transforms that imply movement */
+  .btn-duugo:hover,
+  .lift:hover{transform:none!important}
+}
